@@ -237,7 +237,7 @@ def BuildRequestData( buffer_number = None ):
 
 def _JsonFromFuture( future ):
   response = future.result()
-  _ValidateResponseObject( response )
+  #_ValidateResponseObject( response )
   if response.status_code == BaseRequest.Requests().codes.server_error:
     raise MakeServerException( response.json() )
 
