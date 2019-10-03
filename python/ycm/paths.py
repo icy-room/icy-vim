@@ -26,7 +26,9 @@ import os
 import sys
 import vim
 import re
+import icyclient
 
+DIR_OF_ICY_CLIENT = os.path.dirname( os.path.abspath( icyclient.__file__ ) )
 # Can't import these from setup.py because it makes nosetests go crazy.
 DIR_OF_CURRENT_SCRIPT = os.path.dirname( os.path.abspath( __file__ ) )
 DIR_OF_YCMD = os.path.join( DIR_OF_CURRENT_SCRIPT, '..', '..', 'third_party',
@@ -99,4 +101,4 @@ def _EndsWithPython( path ):
 
 
 def PathToServerScript():
-  return os.path.join( DIR_OF_YCMD, 'ycmd' )
+  return os.path.join( DIR_OF_ICY_CLIENT, '__main__.py' )
