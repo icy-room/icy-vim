@@ -377,15 +377,11 @@ class YouCompleteMe( object ):
 
 
   def NativeFiletypeCompletionAvailable( self ):
-    return any( self.FiletypeCompleterExistsForFiletype( x ) for x in
-                vimsupport.CurrentFiletypes() )
+    return True
 
 
   def NativeFiletypeCompletionUsable( self ):
-    disabled_filetypes = self._user_options[
-      'filetype_specific_completion_to_disable' ]
-    return ( vimsupport.CurrentFiletypesEnabled( disabled_filetypes ) and
-             self.NativeFiletypeCompletionAvailable() )
+    return True
 
 
   def NeedsReparse( self ):

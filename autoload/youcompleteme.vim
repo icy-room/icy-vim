@@ -433,6 +433,7 @@ endfunction
 
 
 function! s:AllowedToCompleteInBuffer( buffer )
+  return 1
   let buftype = getbufvar( a:buffer, '&buftype' )
 
   if has_key( s:buftype_blacklist, buftype )
