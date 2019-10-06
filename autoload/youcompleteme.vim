@@ -731,9 +731,7 @@ function! s:OnTextChangedInsertMode()
   endif
 
   if &completefunc == "youcompleteme#CompleteFunc" &&
-        \ ( g:ycm_auto_trigger || s:force_semantic ) &&
-        \ !s:InsideCommentOrStringAndShouldStop() &&
-        \ !s:OnBlankLine()
+        \ ( g:ycm_auto_trigger || s:force_semantic )
     " Immediately call previous completion to avoid flickers.
     call s:Complete()
     call s:RequestCompletion()
