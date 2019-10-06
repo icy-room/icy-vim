@@ -329,6 +329,7 @@ function! s:SetUpKeyMappings()
     silent! exe 'inoremap <unique> <expr> ' . key .
           \ ' <SID>OnDeleteChar( "\' . key . '" )'
   endfor
+  imap <C-c> <C-y>
 endfunction
 
 
